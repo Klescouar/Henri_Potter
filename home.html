@@ -1,0 +1,25 @@
+
+<div ng-controller="bookList">
+  <div class="nav">
+    <h1>Henri Potier</h1>
+    <div class="panier">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        <p> {{nbPanier}} </p>
+    </div>
+    <a href="#/panier"><input ng-click="goPanier()" type="button" name="name" value="Voir le panier"></a>
+</div>
+
+
+
+
+<div class="livre">
+    <div class="list">
+        <div class="block" ng-repeat="data in datas">
+            <img class="img" src="{{data.cover}}" alt="" />
+            <p>{{data.title}}</p>
+            <p>{{data.price | currency}}</p>
+            <input type="button" name="name" value="Ajouter au panier" ng-click="addPanier()">
+        </div>
+    </div>
+</div>
+</div>

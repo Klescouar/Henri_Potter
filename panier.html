@@ -1,0 +1,12 @@
+<div ng-controller="panList">
+    <h1 id="h1">Mon panier:</h1>
+    <div class="panFlex">
+        <div class="blockPan" ng-repeat="panta in panTab track by $index">
+            <img class="imgPan" src="{{panta.cover}}" alt="" />
+            <p>{{panta.title}}</p>
+        </div>
+    </div>
+    <h1 id="h1">Total sans la réduction: {{total | currency}}</h1>
+    <h1 id="h1">Total {{choixReduc}}: {{totalFinal | currency}}</h1>
+
+</div>
